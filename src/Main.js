@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PopupContainer from "./containers/PopupContainer";
+import back from './res/back.png';
 
 const Main = () => {
 
@@ -13,7 +14,7 @@ const Main = () => {
     
     return (
         <div className="main-container">
-            <div className="back"></div>
+            <img src={back} />
             <button className="btn-open" onClick={showPopup}>설정 대화상자 열기</button>
             <div className={isShowPopup ? "show overlay" : "overlay"} onClick={hidePopup}></div>
             <PopupContainer isShowPopup={isShowPopup} hidePopup={hidePopup}/>
