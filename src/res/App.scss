@@ -1,0 +1,179 @@
+$blue: #228be6; // 주석 선언
+$btn : #4c80f1;
+$silver : #dadbdf;
+
+body, html{
+    width:100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+#root, .app{
+    // background:gray;
+    width: 100%;
+    height: 100%;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    .back{
+        width: 100%;
+        height: 100%;
+        background-image: url('./back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        position: fixed;
+        top:0;
+        left:0;
+        opacity: 0.3;
+    }
+    .btn-open{
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $btn;
+        width:200px;
+        height: 44px;
+        color: #fff;
+        border:none;
+        border-radius: 8px;
+    }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background:#000;
+        top:0;
+        left:0;
+        opacity: 0.6;
+        display: none;
+        &.show{
+            display: block;
+        }
+    }
+    .popup-wrap{
+        background-color:#fff;
+        width: 824px;
+        height: 485px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 84px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: none;
+        &.show{
+            display: block;
+        }
+        h1{
+            font-size:32px;
+            line-height: 44px;
+            margin:0;
+        }
+        
+        .middle{
+            text-align: left;
+            .calendar_box{
+                position: absolute;
+                width: 320px;
+                height: 346px;
+                border-radius: 8px;
+                bottom:-243px;
+                left:84px;
+                display: none;
+            }
+            .show{
+                display: block;
+            }
+            h2{
+                font-size:14px;
+                font-weight: 500;
+                text-align: left;
+                margin-bottom:10px;
+            }
+            select, input{
+                width:25%;
+                margin-right:2%;
+                height: 44px;
+                border-radius: 8px;
+                border:1px solid black;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 4px 16px;
+                text-indent: 4px 16px;
+                cursor:pointer;
+                position: relative;
+                display: inline-block;
+                background-image: linear-gradient(45deg, transparent 50%, #000 50%), linear-gradient(135deg, #000 50%, transparent 50%);
+                background-position: calc(100% - 20px) calc(1.2em + 2px), calc(100% - 15px) calc(1.2em + 2px), calc(100% - 2.5em);
+                background-size: 5px 5px, 5px 5px, 1px 1.5em;
+                background-repeat: no-repeat;
+            }
+            input{
+                height: 34px;
+            }
+            .date-picker-wrap:nth-child(odd){
+                border-top:1px solid $silver;
+            }
+            .date-picker-wrap{
+                // height: 150px;
+                padding:40px 0;
+            }
+            .date{
+                width:35%;
+            }
+        }
+        .bottom{
+            position: absolute;
+            bottom:40px;
+            right:84px;
+            button{
+                background: $btn;
+                width:62px;
+                height: 44px;
+                color: #fff;
+                border:none;
+                border-radius: 8px;
+                cursor:pointer;
+                &.cancel{
+                    background: #fff;
+                    width:62px;
+                    height: 44px;
+                    color: #000;
+                    border:1px solid #000;
+                    border-radius: 8px;
+                    cursor:pointer;
+                    margin-right:22px;
+                }
+            }
+            
+        }
+    }
+}
+
+// button {
+//     display: inline-flex;
+//     color: white;
+//     font-weight: bold;
+//     outline: none;
+//     border-radius: 4px;
+//     border: none;
+//     cursor: pointer;
+
+//     height: 2.25rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//     font-size: 1rem;
+
+//     background: $blue; // 주석 사용
+//     &:hover {
+//         background: lighten($blue, 10%); // 색상 10% 밝게
+//     }
+
+//     &:active {
+//         background: darken($blue, 10%); // 색상 10% 어둡게
+//     }
+// }
